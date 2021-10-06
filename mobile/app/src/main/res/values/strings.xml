@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Client-Side</string>
+    <string name="default_json">{\"type\" : \"MOVE\", \"x\" : %f, \"y\" : %f} </string>
+</resources>

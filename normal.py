@@ -33,7 +33,8 @@ while True:
         if client_input['type'] == 'TIME':
             client_socket.send(time.strftime("%c").encode('utf-8'))
         elif client_input['type'] == 'MOVE':
-            moveTo(client_input['x'], client_input['y'])
+            #print(pyautogui.position().x)
+            moveTo(pyautogui.position().x + client_input['x'], pyautogui.position().y + client_input['y'])
             client_socket.send("ok".encode('utf-8'))
         elif client_input['type'] == 'RAND':
             client_socket.send(str(random.randrange(0, 11)).encode('utf-8'))
